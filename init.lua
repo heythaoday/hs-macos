@@ -21,16 +21,16 @@ for i, shortcut in ipairs(ctrlCmdShortcuts) do
 end
 
 -- Bind volume controls
-hs.hotkey.bind({"alt"}, "-", volumeControl.volumeDown)
-hs.hotkey.bind({"alt"}, "=", volumeControl.volumeUp)
+hs.hotkey.bind({"ctrl", "alt"}, "-", volumeControl.volumeDown)
+hs.hotkey.bind({"ctrl", "alt"}, "=", volumeControl.volumeUp)
 
 -- Bind audio device chooser
-hs.hotkey.bind({"ctrl", "shift"}, "C", audioDeviceManager.chooseAudioOutputDevice)
+hs.hotkey.bind({"ctrl", "alt"}, "C", audioDeviceManager.chooseAudioOutputDevice)
 
 -- Bind media control
-hs.hotkey.bind({"ctrl", "shift"}, "P", youtubeControl.togglePlayPause)
+hs.hotkey.bind({"ctrl", "alt"}, "P", youtubeControl.togglePlayPause)
 
 -- Bind hotkey display
-hs.hotkey.bind({"cmd", "ctrl", "shift"}, "H", function()
+hs.hotkey.bind({"ctrl", "alt"}, "H", function()
     hotkeyDisplay.showAllHotkeys(ctrlCmdShortcuts)
 end)
