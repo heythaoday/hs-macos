@@ -43,7 +43,7 @@ for i, shortcut in ipairs(ctrlCmdShortcuts) do
 end
 
 -- Bind window management hotkeys
-hs.hotkey.bind({"fn"}, "M", windowManager.maximizeWindow)
+hs.hotkey.bind({"ctrl", "alt"}, "M", windowManager.maximizeWindow)
 -- hs.hotkey.bind({"ctrl", "alt"}, "C", windowManager.centerWindow)
 -- hs.hotkey.bind({"ctrl", "alt"}, "Left", windowManager.leftHalf)
 -- hs.hotkey.bind({"ctrl", "alt"}, "Right", windowManager.rightHalf)
