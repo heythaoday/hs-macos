@@ -34,3 +34,8 @@ hs.hotkey.bind({"ctrl", "alt"}, "P", youtubeControl.togglePlayPause)
 hs.hotkey.bind({"ctrl", "alt"}, "H", function()
     hotkeyDisplay.showAllHotkeys(ctrlCmdShortcuts)
 end)
+-- Bind reload Hammerspoon config
+hs.hotkey.bind({"ctrl", "alt"}, "R", function()
+    hs.reload()
+    hs.alert.show("Hammerspoon config reloaded")
+end)
