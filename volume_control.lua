@@ -1,12 +1,7 @@
 local volumeControl = {}
 
 local function showVolumePopover(volume)
-    hs.notify.new({
-        title = "Volume Control",
-        informativeText = "Volume: " .. math.floor(volume) .. "%",
-        autoWithdraw = true,
-        withdrawAfter = 3
-    }):send()
+    hs.alert.show("Volume: " .. math.floor(volume) .. "%")
 end
 
 function volumeControl.volumeDown()

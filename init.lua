@@ -31,9 +31,10 @@ local ctrlCmdShortcuts = {
     {"1", "Google Chrome"},
     {"2", "Visual Studio Code"},
     {"3", "Iterm"},
+    {"4", "Postman"},
     {"Q", "Safari"},
     {"W", "Things3"},
-    {"E", "Fork"}
+    {"E", "Obsidian"}
 }
 
 for i, shortcut in ipairs(ctrlCmdShortcuts) do
