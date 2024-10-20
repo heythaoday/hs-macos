@@ -1,4 +1,5 @@
 local youtubeControl = {}
+local alertStyle = require("ui/alert_style")
 
 function youtubeControl.togglePlayPause()
     local script = [[
@@ -30,19 +31,9 @@ function youtubeControl.togglePlayPause()
 
     local ok, result = hs.osascript.applescript(script)
     if ok then
-        hs.notify.new({
-            title = "YouTube Control",
-            informativeText = "Toggled Play: " .. (result or "No title found"),
-            autoWithdraw = true,
-            withdrawAfter = 3
-        }):send()
+        hs.alert.show("Toggled Play: " .. (result or "No title found"), alertStyle)
     else
-        hs.notify.new({
-            title = "YouTube Control",
-            informativeText = "Error toggling play/pause: " .. (result or "Unknown error"),
-            autoWithdraw = true,
-            withdrawAfter = 3
-        }):send()
+        hs.alert.show("Error toggling play/pause: " .. (result or "Unknown error"), alertStyle)
     end
 end
 
@@ -70,19 +61,9 @@ function youtubeControl.nextVideo()
 
     local ok, result = hs.osascript.applescript(script)
     if ok then
-        hs.notify.new({
-            title = "YouTube Control",
-            informativeText = "Skipped to Next Video",
-            autoWithdraw = true,
-            withdrawAfter = 3
-        }):send()
+        hs.alert.show("Skipped to Next Video: " .. (result or "No title found"), alertStyle)
     else
-        hs.notify.new({
-            title = "YouTube Control",
-            informativeText = "Error skipping to next video: " .. (result or "Unknown error"),
-            autoWithdraw = true,
-            withdrawAfter = 3
-        }):send()
+        hs.alert.show("Error skipping to next video: " .. (result or "Unknown error"), alertStyle)
     end
 end
 

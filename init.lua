@@ -4,15 +4,16 @@ local audioDeviceManager = require("audio_device_manager")
 local youtubeControl = require("youtube_control")
 local hotkeyDisplay = require("hotkey_display")
 local windowManager = require("window_manager")
+local alertStyle = require("ui/alert_style")
 
 -- Bind hotkey display
 hs.hotkey.bind({"ctrl", "alt", "shift"}, "H", function()
     hotkeyDisplay.showAllHotkeys(ctrlCmdShortcuts)
 end)
 -- Bind reload Hammerspoon config
-hs.hotkey.bind({"ctrl", "alt", "shift"}, "R", function()
+hs.hotkey.bind({"ctrl", "alt"}, "R", function()
+    hs.alert.show("Hammerspoon config reloaded", alertStyle)
     hs.reload()
-    hs.alert.show("Hammerspoon config reloaded")
 end)
 
 -- Bind volume controls
@@ -29,9 +30,9 @@ hs.hotkey.bind({"ctrl", "alt"}, "N", youtubeControl.nextVideo)
 -- Bind application shortcuts
 local ctrlCmdShortcuts = {
     {"1", "Google Chrome"},
-    {"2", "Visual Studio Code"},
-    {"3", "Iterm"},
-    {"4", "Postman"},
+    {"2", "WebStorm"},
+    {"3", "Visual Studio Code"},
+    {"4", "Iterm"},
     {"Q", "Safari"},
     {"W", "Things3"},
     {"E", "Obsidian"}

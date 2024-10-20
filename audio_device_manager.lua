@@ -1,4 +1,5 @@
 local audioDeviceManager = {}
+local alertStyle = require("ui/alert_style")
 
 function audioDeviceManager.chooseAudioOutputDevice()
     local devices = hs.audiodevice.allOutputDevices()
@@ -17,7 +18,7 @@ function audioDeviceManager.chooseAudioOutputDevice()
         local selectedDevice = hs.audiodevice.findOutputByUID(choice["uid"])
         if selectedDevice then
             selectedDevice:setDefaultOutputDevice()
-            hs.alert.show("Switched to: " .. selectedDevice:name())
+            hs.alert.show("Switched to: " .. selectedDevice:name(), alertStyle)
         end
     end)
 

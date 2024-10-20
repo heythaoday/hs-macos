@@ -1,7 +1,8 @@
 local volumeControl = {}
+local alertStyle = require("ui/alert_style")
 
 local function showVolumePopover(volume)
-    hs.alert.show("Volume: " .. math.floor(volume) .. "%")
+    hs.alert.show("Volume: " .. math.floor(volume) .. "%", alertStyle)
 end
 
 function volumeControl.volumeDown()
