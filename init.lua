@@ -34,7 +34,7 @@ local ctrlCmdShortcuts = {
     {"3", "Visual Studio Code"},
     {"4", "Iterm"},
     {"Q", "Safari"},
-    {"W", "Things3"},
+    {"W", "Insomnia"},
     {"E", "Obsidian"}
 }
 
@@ -46,7 +46,7 @@ end
 
 -- Bind window management hotkeys
 hs.hotkey.bind({"ctrl", "alt"}, "M", windowManager.maximizeWindow)
--- hs.hotkey.bind({"ctrl", "alt"}, "C", windowManager.centerWindow)
+hs.hotkey.bind({"ctrl", "alt"}, "F", windowManager.resizeToFullHD34)
 -- hs.hotkey.bind({"ctrl", "alt"}, "Left", windowManager.leftHalf)
 -- hs.hotkey.bind({"ctrl", "alt"}, "Right", windowManager.rightHalf)
 -- hs.hotkey.bind({"ctrl", "alt"}, "Up", windowManager.topHalf)
